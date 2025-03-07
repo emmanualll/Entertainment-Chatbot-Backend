@@ -1,106 +1,36 @@
 from fastapi import FastAPI
-import random
+from games import (
+    play_rock_paper_scissors, start_guess_number, guess_number,
+    start_tic_tac_toe, play_tic_tac_toe,
+    start_word_scramble, guess_word_scramble
+)
 
 app = FastAPI()
 
-@app.get("/")
-def home():
-    return {"message": "Backend is running on GitHub Codespaces!"}
+@app.get("/chat/{user_id}/{user_message}")
+def chatbot_response(user_id: str, user_message: str):
+    user_message = user_message.lower()
 
-@app.get("/play-rps/{user_choice}")
-def play_rps(user_choice: str):
-    choices = ["rock", "paper", "scissors"]
-    bot_choice = random.choice(choices)
+    # Rock-Paper-Scissors
+    if user_message in ["rock", "paper", "scissors"]:
+        return {"response": play_rock_paper_scissors(user_id, user_message)}
 
-    if user_choice not in choices:
-        return {"error": "Invalid choice! Choose rock, paper, or scissors."}
+    # Guess the Number
+    if "start guess the number" in user_message:
+        return {"response": start_guess_number(user_id)}
+    if user_message.isdigit():
+        return {"response": guess_number(user_id, user_message)}
 
-    if user_choice == bot_choice:
-        result = "It's a tie!"
-    elif (user_choice == "rock" and bot_choice == "scissors") or \
-         (user_choice == "paper" and bot_choice == "rock") or \
-         (user_choice == "scissors" and bot_choice == "paper"):
-        result = "You win!"
-    else:
-        result = "You lose!"
+    # Tic-Tac-Toe
+    if "start tic-tac-toe" in user_message:
+        return {"response": start_tic_tac_toe(user_id)}
+    if user_message.isdigit():
+        return {"response": play_tic_tac_toe(user_id, user_message)}
 
-    return {
-        "your_choice": user_choice,
-        "bot_choice": bot_choice,
-        "result": result
-    }
-# 🎮 Guess the Number
-@app.get("/guess-number/{user_guess}")
-def guess_number(user_guess: int):
-    number = random.randint(1, 10)
+    # Word Scramble
+    if "start word scramble" in user_message:
+        return {"response": start_word_scramble(user_id)}
+    if len(user_message) > 2:
+        return {"response": guess_word_scramble(user_id, user_message)}
 
-    if user_guess == number:
-        result = "You guessed it right!"
-    else:
-        result = f"Wrong guess! The correct number was {number}."
-
-    return {
-        "your_guess": user_guess,
-        "correct_number": number,
-        "result": result
-    }
-
-# 🎮 Coin Toss
-@app.get("/coin-toss")
-def coin_toss():
-    outcome = random.choice(["Heads", "Tails"])
-    return {"coin_result": outcome}
-
-# 🎮 Word Scramble
-words = ["python", "fastapi", "developer", "hackathon", "backend"]
-
-@app.get("/scramble-word")
-def scramble_word():
-    word = random.choice(words)
-    scrambled = "".join(random.sample(word, len(word)))
-    return {"scrambled_word": scrambled, "original_word": word}
-
-# Sample story prompts and continuations
-story_prompts = {
-    "adventure": "You find an ancient map leading to a hidden treasure deep in the jungle...",
-    "sci-fi": "The spaceship trembled as you activated the hyperdrive, warping into an unknown galaxy...",
-    "mystery": "A strange letter appears at your doorstep, sealed with an ancient symbol...",
-    "fantasy": "As you touch the glowing sword, you feel a surge of magical energy course through you...",
-}
-
-@app.get("/start-story/{genre}")
-def start_story(genre: str):
-    if genre.lower() not in story_prompts:
-        return {"error": "Invalid genre! Choose adventure, sci-fi, mystery, or fantasy."}
-
-    return {"genre": genre, "story": story_prompts[genre.lower()]}
-
-@app.get("/continue-story/{genre}")
-def continue_story(genre: str):
-    story_continuations = {
-        "adventure": [
-            "Following the map, you uncover a hidden cave filled with golden artifacts.",
-            "Suddenly, a group of explorers appear, claiming they have been searching for the treasure for years.",
-            "A trapdoor opens beneath your feet, leading to an underground tunnel!"
-        ],
-        "sci-fi": [
-            "The control panel flickers, signaling an approaching alien fleet.",
-            "You receive a cryptic transmission from an unknown source, warning you to turn back.",
-            "An asteroid field appears out of nowhere, forcing you to make a quick decision!"
-        ],
-        "mystery": [
-            "You open the letter and find an old photograph of a place you've never seen before.",
-            "A shadowy figure watches you from across the street, then disappears into the night.",
-            "A hidden compartment in your bookshelf clicks open, revealing a dusty diary."
-        ],
-        "fantasy": [
-            "A dragon descends from the sky, its eyes glowing with wisdom.",
-            "The sword in your hands whispers ancient words, guiding you towards your destiny.",
-            "A portal opens before you, revealing a kingdom lost to time."
-        ],
-    }
-
-    if genre.lower() not in story_continuations:
-        return {"error": "Invalid genre! Choose adventure, sci-fi, mystery, or fantasy."}
-
-    return {"genre": genre, "story": random.choice(story_continuations[genre.lower()])}
+    return {"response": "I don't understand. Try asking me to play a game!"}
