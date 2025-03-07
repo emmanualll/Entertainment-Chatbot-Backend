@@ -59,3 +59,48 @@ def scramble_word():
     word = random.choice(words)
     scrambled = "".join(random.sample(word, len(word)))
     return {"scrambled_word": scrambled, "original_word": word}
+
+# Sample story prompts and continuations
+story_prompts = {
+    "adventure": "You find an ancient map leading to a hidden treasure deep in the jungle...",
+    "sci-fi": "The spaceship trembled as you activated the hyperdrive, warping into an unknown galaxy...",
+    "mystery": "A strange letter appears at your doorstep, sealed with an ancient symbol...",
+    "fantasy": "As you touch the glowing sword, you feel a surge of magical energy course through you...",
+}
+
+@app.get("/start-story/{genre}")
+def start_story(genre: str):
+    if genre.lower() not in story_prompts:
+        return {"error": "Invalid genre! Choose adventure, sci-fi, mystery, or fantasy."}
+
+    return {"genre": genre, "story": story_prompts[genre.lower()]}
+
+@app.get("/continue-story/{genre}")
+def continue_story(genre: str):
+    story_continuations = {
+        "adventure": [
+            "Following the map, you uncover a hidden cave filled with golden artifacts.",
+            "Suddenly, a group of explorers appear, claiming they have been searching for the treasure for years.",
+            "A trapdoor opens beneath your feet, leading to an underground tunnel!"
+        ],
+        "sci-fi": [
+            "The control panel flickers, signaling an approaching alien fleet.",
+            "You receive a cryptic transmission from an unknown source, warning you to turn back.",
+            "An asteroid field appears out of nowhere, forcing you to make a quick decision!"
+        ],
+        "mystery": [
+            "You open the letter and find an old photograph of a place you've never seen before.",
+            "A shadowy figure watches you from across the street, then disappears into the night.",
+            "A hidden compartment in your bookshelf clicks open, revealing a dusty diary."
+        ],
+        "fantasy": [
+            "A dragon descends from the sky, its eyes glowing with wisdom.",
+            "The sword in your hands whispers ancient words, guiding you towards your destiny.",
+            "A portal opens before you, revealing a kingdom lost to time."
+        ],
+    }
+
+    if genre.lower() not in story_continuations:
+        return {"error": "Invalid genre! Choose adventure, sci-fi, mystery, or fantasy."}
+
+    return {"genre": genre, "story": random.choice(story_continuations[genre.lower()])}
