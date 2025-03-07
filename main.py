@@ -29,3 +29,33 @@ def play_rps(user_choice: str):
         "bot_choice": bot_choice,
         "result": result
     }
+# 🎮 Guess the Number
+@app.get("/guess-number/{user_guess}")
+def guess_number(user_guess: int):
+    number = random.randint(1, 10)
+
+    if user_guess == number:
+        result = "You guessed it right!"
+    else:
+        result = f"Wrong guess! The correct number was {number}."
+
+    return {
+        "your_guess": user_guess,
+        "correct_number": number,
+        "result": result
+    }
+
+# 🎮 Coin Toss
+@app.get("/coin-toss")
+def coin_toss():
+    outcome = random.choice(["Heads", "Tails"])
+    return {"coin_result": outcome}
+
+# 🎮 Word Scramble
+words = ["python", "fastapi", "developer", "hackathon", "backend"]
+
+@app.get("/scramble-word")
+def scramble_word():
+    word = random.choice(words)
+    scrambled = "".join(random.sample(word, len(word)))
+    return {"scrambled_word": scrambled, "original_word": word}
