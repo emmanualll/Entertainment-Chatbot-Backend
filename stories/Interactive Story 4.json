@@ -1,0 +1,70 @@
+{
+    "title": "The Cursed Crown",
+    "introduction": "You are Erynn, a skilled blacksmith in the kingdom of Eldarion. One day, while repairing an old sword, you discover a hidden compartment containing a mysterious map. The map leads to the Cursed Crown, a legendary artifact said to grant immense power—but at a terrible cost. With war looming over the kingdom, the crown could change everything. You must decide your next move.",
+    "choices": [
+      {
+        "option": "Follow the map and seek the crown for yourself.",
+        "outcome": "You embark on a perilous journey through dense forests, across treacherous mountains, and into forgotten ruins. The map leads you to a dark cave where the crown is hidden. Before you can proceed, you must face the first trial: a riddle carved into stone.",
+        "trial": "I am not alive, but I grow. I don’t have lungs, but I need air. I don’t have a mouth, but I can drown. What am I?",
+        "sub_choices": [
+          {
+            "option": "Answer 'fire'.",
+            "outcome": "The stone door crumbles, revealing a hidden chamber. At its center, the Cursed Crown glows ominously atop a pedestal.",
+            "endings": [
+              { "choice": "Take the crown.", "consequence": "The crown grants you unimaginable power, but it also consumes your mind. You become a tyrant, plunging Eldarion into an age of darkness." },
+              { "choice": "Leave the crown.", "consequence": "You resist temptation and step away. The cave collapses, sealing the crown forever. You return home, forever changed but free of its curse." }
+            ]
+          },
+          {
+            "option": "Bypass the riddle and move forward.",
+            "outcome": "You ignore the riddle and press on, but the cave’s magic traps you in an endless labyrinth. You wander until your last breath, doomed to be a cautionary tale for future adventurers."
+          },
+          {
+            "option": "Turn back and reconsider your choices.",
+            "outcome": "You decide the crown is too dangerous and leave. As you walk away, the map disintegrates in your hands, ensuring no one else can find it. However, war soon engulfs Eldarion, and you wonder if you made the right choice."
+          }
+        ]
+      },
+      {
+        "option": "Take the map to the king and let him decide.",
+        "outcome": "You present the map to King Alden, who is intrigued. He gathers his knights and scholars to retrieve the crown. You are given a choice:",
+        "sub_choices": [
+          {
+            "option": "Join the expedition as a guide.",
+            "outcome": "You lead the king’s men to the cave. When you reach the crown, tension rises as the knights debate who should claim it.",
+            "endings": [
+              { "choice": "Take the crown yourself.", "consequence": "You seize it to prevent bloodshed, but its dark power corrupts you. The kingdom falls under your rule, now one of fear and oppression." },
+              { "choice": "Destroy the crown.", "consequence": "With a mighty swing of your blacksmith’s hammer, you shatter the crown. The curse is broken, and you are hailed as a hero." }
+            ]
+          },
+          {
+            "option": "Stay behind and let the professionals handle it.",
+            "outcome": "The expedition retrieves the crown, but its curse drives King Alden mad. He becomes a tyrant, ruling with an iron fist. You regret not acting sooner and join a rebellion against him."
+          },
+          {
+            "option": "Warn the king about the crown’s curse.",
+            "outcome": "The king heeds your warning and orders the crown to be destroyed upon retrieval. A grand ceremony is held, and you are rewarded with a place in the royal court."
+          }
+        ]
+      },
+      {
+        "option": "Destroy the map and forget you ever found it.",
+        "outcome": "You burn the map, ensuring no one can ever claim the crown. However, word of your discovery spreads, attracting the attention of a shadowy figure who approaches you with an offer.",
+        "sub_choices": [
+          {
+            "option": "Refuse and send the figure away.",
+            "outcome": "The figure vanishes, but unease lingers. War soon engulfs Eldarion, and you wonder if you doomed the kingdom by keeping the crown hidden."
+          },
+          {
+            "option": "Pretend to cooperate and lead them into a trap.",
+            "outcome": "You guide them into a treacherous part of the forest, where they are never seen again. However, more seekers come, forcing you to live as a fugitive."
+          },
+          {
+            "option": "Recreate the map from memory and sell it.",
+            "outcome": "You sell the map to the highest bidder. Soon, chaos spreads as warlords and tyrants fight for the crown. You are eventually captured and executed as a traitor."
+          }
+        ]
+      }
+    ]
+  }
+  

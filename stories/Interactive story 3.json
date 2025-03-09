@@ -1,0 +1,181 @@
+{
+    "title": "The Vanishing Heiress",
+    "protagonist": {
+      "name": "Alex Kane",
+      "role": "Private detective",
+      "description": "A seasoned investigator known for solving tough cases."
+    },
+    "setup": {
+      "client": {
+        "name": "Victor Blackwood",
+        "role": "Wealthy businessman",
+        "problem": "His daughter, Eleanor, has vanished.",
+        "clue": "A cryptic note: 'The clock strikes at midnight.'"
+      },
+      "main_choices": [
+        "Investigate Eleanor’s room for clues",
+        "Interview the Blackwood family and staff",
+        "Stake out the town clocktower at midnight"
+      ]
+    },
+    "choices": {
+      "Investigate Eleanor’s room": {
+        "discoveries": [
+          "A hidden diary revealing a secret relationship with 'J.'",
+          "A ticket stub for a midnight train"
+        ],
+        "options": {
+          "Go to the train station": {
+            "outcomes": [
+              {
+                "choice": "Confront Eleanor",
+                "result": [
+                  "She begs you to let her go.",
+                  "If you let her go, she disappears forever, and Victor blames you.",
+                  "If you stop her, she resents you but remains safe."
+                ]
+              },
+              {
+                "choice": "Follow secretly",
+                "result": [
+                  "Eleanor’s companion is a con artist.",
+                  "You rescue Eleanor, but the con artist escapes and vows revenge."
+                ]
+              }
+            ]
+          },
+          "Confront Victor": {
+            "outcome": [
+              "Victor admits he forbade Eleanor from seeing 'J.'",
+              "You track down 'J.' and find he is a decent person.",
+              "Eleanor agrees to return home only if Victor accepts her choices.",
+              "The family reconciles, and you are hailed as a hero."
+            ]
+          },
+          "Look for more clues": {
+            "discovery": "A hidden map in Eleanor's closet leading to a secluded cabin.",
+            "options": {
+              "Go to the cabin": {
+                "outcome": [
+                  "You find Eleanor hiding there.",
+                  "She faked her disappearance to escape her father’s control."
+                ]
+              },
+              "Call the police": {
+                "outcome": [
+                  "The police raid the cabin, but Eleanor isn’t there.",
+                  "The map was a decoy, and you have lost valuable time."
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Interview the family and staff": {
+        "suspect": {
+          "name": "Clara",
+          "role": "Maid",
+          "clue": "She slips up, mentioning a 'midnight meeting.'"
+        },
+        "options": {
+          "Press Clara": {
+            "confession": "Eleanor paid Clara to keep quiet about meeting someone at the abandoned theater.",
+            "outcomes": [
+              {
+                "choice": "Go to the theater",
+                "result": [
+                  "Eleanor is rehearsing a play with a local theater group.",
+                  "She was secretly pursuing her passion."
+                ]
+              },
+              {
+                "choice": "Tell Victor",
+                "result": [
+                  "Victor storms the theater, humiliating Eleanor.",
+                  "She runs away, and the case ends in failure."
+                ]
+              }
+            ]
+          },
+          "Follow Clara": {
+            "discovery": "Clara meets a shady figure discussing a ransom for Eleanor.",
+            "outcomes": [
+              {
+                "choice": "Confront them",
+                "result": [
+                  "You rescue Eleanor, but the kidnappers escape.",
+                  "Victor rewards you, but the danger isn't over."
+                ]
+              },
+              {
+                "choice": "Call the police",
+                "result": [
+                  "The police arrest the kidnappers, but Eleanor is traumatized.",
+                  "She distances herself from her family."
+                ]
+              }
+            ]
+          },
+          "Confront Victor": {
+            "outcome": [
+              "Victor admits he knew about Eleanor’s plans but didn’t take them seriously.",
+              "You track Eleanor to a remote cabin, where she is hiding with a friend.",
+              "She agrees to return home only if Victor promises to listen to her."
+            ]
+          }
+        }
+      },
+      "Stake out the clocktower": {
+        "event": "At midnight, Eleanor arrives with a masked figure.",
+        "options": {
+          "Confront them": {
+            "outcome": [
+              "Eleanor reveals she is part of a secret society fighting corruption.",
+              "The masked figure is her mentor.",
+              {
+                "choice": "Join them",
+                "result": "You become a member of the society, fighting for justice in the shadows."
+              },
+              {
+                "choice": "Refuse",
+                "result": "Eleanor disappears into the night, leaving you with unanswered questions."
+              }
+            ]
+          },
+          "Follow them": {
+            "discovery": "A hidden underground base where Eleanor is helping expose Victor’s illegal dealings.",
+            "outcomes": [
+              {
+                "choice": "Help Eleanor",
+                "result": [
+                  "You assist in gathering evidence.",
+                  "Victor is arrested, and Eleanor starts a new life."
+                ]
+              },
+              {
+                "choice": "Warn Victor",
+                "result": [
+                  "Victor destroys the evidence and frames the society as criminals.",
+                  "Eleanor disowns you and disappears."
+                ]
+              }
+            ]
+          },
+          "Call for backup": {
+            "outcome": [
+              "The police arrive, but the masked figure escapes with Eleanor.",
+              {
+                "choice": "Continue the investigation",
+                "result": "You uncover a web of corruption, but Eleanor is never found."
+              },
+              {
+                "choice": "Give up",
+                "result": "The case goes cold, and you are left with a sense of failure."
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+  

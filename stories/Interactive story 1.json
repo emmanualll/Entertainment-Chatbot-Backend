@@ -1,0 +1,49 @@
+{
+    "title": "The Lost Kingdom",
+    "introduction": "You are a young adventurer named Elara, standing at the edge of the Enchanted Forest. Legends say that deep within the forest lies the Lost Kingdom of Eldoria, filled with treasures and ancient secrets. However, the forest is also home to dangerous creatures and magical traps. You have three options:",
+    "choices": [
+        {
+            "option": "Enter the forest alone, relying on your wits and a small dagger.",
+            "paths": [
+                {
+                    "path": "Take the thorny path",
+                    "outcome": "You push through the thorny vines, enduring scratches and cuts. After hours of struggle, you emerge into a clearing where a massive stone gate stands. It’s the entrance to the Lost Kingdom! However, a giant serpent guards the gate.",
+                    "choices": [
+                        {
+                            "option": "Fight the serpent with your dagger.",
+                            "ending": "You bravely fight the serpent but are outmatched. As the serpent strikes, you wake up in the village—it was all a dream. Or was it?"
+                        },
+                        {
+                            "option": "Try to sneak past it.",
+                            "ending": "You successfully sneak past the serpent and enter the Lost Kingdom. You find treasures beyond your wildest dreams, but the kingdom’s curse traps you there forever. You become its new guardian."
+                        }
+                    ]
+                },
+                {
+                    "path": "Follow the glowing mushrooms",
+                    "outcome": "The mushrooms lead you to a hidden cave filled with ancient artifacts. Inside, you find a magical portal. Stepping through, you’re transported to the heart of the Lost Kingdom. However, the kingdom is in ruins, and its ghosts demand you restore it.",
+                    "ending": "You spend the rest of your life rebuilding the kingdom, becoming a legendary ruler. But you never return home."
+                }
+            ]
+        },
+        {
+            "option": "Seek out the old hermit who lives nearby for advice and a possible map.",
+            "paths": [
+                {
+                    "path": "Take the map and go alone",
+                    "outcome": "The map leads you safely through the forest, but at the kingdom’s entrance, you face a moral dilemma: take the treasure for yourself or share it with the world.",
+                    "choices": [
+                        {
+                            "option": "Take the treasure",
+                            "ending": "You become wealthy but are haunted by guilt. The treasure curses you, and you lose everything."
+                        },
+                        {
+                            "option": "Share the treasure",
+                            "ending": "You bring the treasure back to the village, becoming a hero. The kingdom’s magic blesses you with a long, happy life."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "The Last Outpost",
+    "description": "The world has been ravaged by a deadly virus, turning most of humanity into Hollows—mindless, aggressive creatures. You are Kai, a scavenger surviving in the ruins of a once-thriving city. One day, you hear rumors of a safe haven called The Last Outpost, a fortified settlement where survivors live in peace. However, getting there is dangerous, and the journey will test your limits. You have three options:",
+    "options": {
+      "1": {
+        "choice": "Set out for The Last Outpost alone, traveling light and fast.",
+        "paths": {
+          "1A": {
+            "choice": "Fight the Hollows with your weapons.",
+            "endings": {
+              "1A1": "You manage to kill a few, but the noise attracts more. You’re overwhelmed and bitten. You turn into a Hollow, joining the horde.",
+              "1A2": "You stumble upon an abandoned lab and inject yourself with an experimental serum. It slows the infection, but you’re forever changed."
+            }
+          },
+          "1B": {
+            "choice": "Try to sneak past them.",
+            "endings": {
+              "1B1": "You successfully sneak past the Hollows, but you’re low on supplies. You reach a ruined town, find supplies, but are ambushed by raiders. You barely escape, injured and alone.",
+              "1B2": "You take the forest route and find a hidden bunker with food and water, but it’s booby-trapped. You survive but are trapped inside."
+            }
+          },
+          "1C": {
+            "choice": "Use a distraction to lead them away.",
+            "endings": {
+              "1C1": "You defeat the raiders but are badly wounded. You limp to The Last Outpost, where you’re welcomed but forever scarred.",
+              "1C2": "The raiders take your supplies and let you go, but you’re left with nothing. You die of starvation before reaching the Outpost."
+            }
+          }
+        }
+      },
+      "2": {
+        "choice": "Gather supplies and recruit a group of survivors to join you.",
+        "group": ["Mara (medic)", "Jax (fighter)", "Tess (scout)"],
+        "paths": {
+          "2A": {
+            "choice": "Push forward, risking exhaustion.",
+            "endings": {
+              "2A1": "You abandon Mara, but guilt tears the group apart. You reach the Outpost, but you’re shunned for your actions.",
+              "2A2": "You carry Mara, slowing the group. You’re ambushed by Hollows, and only you and Jax survive."
+            }
+          },
+          "2B": {
+            "choice": "Send Tess ahead to scout for supplies.",
+            "endings": {
+              "2B1": "You save Tess but lose Jax in the fight. The group reaches the Outpost, but you’re haunted by Jax’s death.",
+              "2B2": "You abandon Tess, and the group loses trust in you. You reach the Outpost, but the group disbands."
+            }
+          },
+          "2C": {
+            "choice": "Stop to rest and regroup.",
+            "endings": {
+              "2C1": "You hold off a Hollow attack but Mara is bitten. You reach the Outpost, but Mara turns and is put down.",
+              "2C2": "The group scatters, and you’re separated. You reach the Outpost alone, never knowing what happened to the others."
+            }
+          }
+        }
+      },
+      "3": {
+        "choice": "Stay in the city and fortify your current hideout.",
+        "paths": {
+          "3A": {
+            "choice": "Build traps and defenses to protect your hideout.",
+            "endings": {
+              "3A1": "You repel a raider attack but lose half your supplies. You survive but live in constant fear.",
+              "3A2": "You strike a deal with raiders, sharing supplies for protection. However, they eventually betray you."
+            }
+          },
+          "3B": {
+            "choice": "Form an alliance with nearby survivors.",
+            "endings": {
+              "3B1": "Your community grows, becoming a beacon of hope in the wasteland. You’re elected leader.",
+              "3B2": "One of the survivors betrays you, leading to the collapse of your community. You’re left alone again."
+            }
+          },
+          "3C": {
+            "choice": "Stockpile supplies and go into hiding.",
+            "endings": {
+              "3C1": "You go mad from loneliness, eventually leaving your hideout and wandering into the wasteland.",
+              "3C2": "You endure the isolation, emerging years later to find the world slowly healing. You join a new community."
+            }
+          }
+        }
+      }
+    }
+  }
+  

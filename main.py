@@ -1,36 +1,63 @@
 from fastapi import FastAPI
-from games import (
-    play_rock_paper_scissors, start_guess_number, guess_number,
-    start_tic_tac_toe, play_tic_tac_toe,
-    start_word_scramble, guess_word_scramble
-)
+import json
+import random
+import os
 
 app = FastAPI()
 
-@app.get("/chat/{user_id}/{user_message}")
-def chatbot_response(user_id: str, user_message: str):
-    user_message = user_message.lower()
+# Load stories at startup
+STORIES_FILE = "stories/stories.json"
 
-    # Rock-Paper-Scissors
-    if user_message in ["rock", "paper", "scissors"]:
-        return {"response": play_rock_paper_scissors(user_id, user_message)}
+if os.path.exists(STORIES_FILE):
+    with open(STORIES_FILE, "r", encoding="utf-8") as f:
+        stories = json.load(f)
+else:
+    stories = []
 
-    # Guess the Number
-    if "start guess the number" in user_message:
-        return {"response": start_guess_number(user_id)}
-    if user_message.isdigit():
-        return {"response": guess_number(user_id, user_message)}
+# Load jokes, trivia, and facts
+def load_json_file(filename):
+    if os.path.exists(filename):
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
 
-    # Tic-Tac-Toe
-    if "start tic-tac-toe" in user_message:
-        return {"response": start_tic_tac_toe(user_id)}
-    if user_message.isdigit():
-        return {"response": play_tic_tac_toe(user_id, user_message)}
+jokes = load_json_file("jokes.json")
+trivia = load_json_file("trivia.json")
+facts = load_json_file("facts.json")
 
-    # Word Scramble
-    if "start word scramble" in user_message:
-        return {"response": start_word_scramble(user_id)}
-    if len(user_message) > 2:
-        return {"response": guess_word_scramble(user_id, user_message)}
 
-    return {"response": "I don't understand. Try asking me to play a game!"}
+def get_random_story():
+    """Returns a random story from the loaded stories."""
+    return random.choice(stories) if stories else {"error": "No stories available"}
+
+def get_random_joke():
+    """Returns a random joke."""
+    return random.choice(jokes) if jokes else {"error": "No jokes available"}
+
+def get_random_fact():
+    """Returns a random fact."""
+    return random.choice(facts) if facts else {"error": "No facts available"}
+
+def get_random_trivia():
+    """Returns a random trivia question."""
+    return random.choice(trivia) if trivia else {"error": "No trivia available"}
+
+@app.get("/story")
+def story():
+    return {"story": get_random_story()}
+
+@app.get("/joke")
+def joke():
+    return {"joke": get_random_joke()}
+
+@app.get("/fact")
+def fact():
+    return {"fact": get_random_fact()}
+
+@app.get("/trivia")
+def trivia_question():
+    return {"trivia": get_random_trivia()}
+
+@app.get("/")
+def home():
+    return {"message": "Welcome to the Entertainment Chatbot API!"}

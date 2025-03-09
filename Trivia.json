@@ -1,0 +1,44 @@
+{
+    "trivia": [
+        {
+            "question": "Which country has the most natural lakes in the world?",
+            "answer": "Russia"
+        },
+        {
+            "question": "Which is the smallest country in the world by land area?",
+            "answer": "Vatican City"
+        },
+        {
+            "question": "Which actor played the role of Tony Stark in the Marvel Cinematic Universe?",
+            "answer": "Robert Downey Jr."
+        },
+        {
+            "question": "What was the first animated feature film produced by Disney?",
+            "answer": "Snow White and the Seven Dwarfs"
+        },
+        {
+            "question": "What is the chemical symbol for Gold?",
+            "answer": "Au"
+        },
+        {
+            "question": "What is the hardest natural substance on Earth?",
+            "answer": "Diamond"
+        },
+        {
+            "question": "What is the longest river on Earth?",
+            "answer": "Nile River"
+        },
+        {
+            "question": "Who wrote the play Romeo and Juliet?",
+            "answer": "William Shakespeare"
+        },
+        {
+            "question": "What is the capital of Australia?",
+            "answer": "Canberra"
+        },
+        {
+            "question": "Which planet in our solar system has the most moons?",
+            "answer": "Saturn (It has over 140 moons)"
+        }
+    ]
+}

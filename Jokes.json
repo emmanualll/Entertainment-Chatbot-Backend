@@ -1,0 +1,44 @@
+{
+    "jokes": [
+        {
+            "question": "What do you call fake spaghetti?",
+            "answer": "An impasta."
+        },
+        {
+            "question": "Why don’t eggs tell jokes?",
+            "answer": "They’d crack each other up."
+        },
+        {
+            "question": "What do you call cheese that isn’t yours?",
+            "answer": "Nacho cheese."
+        },
+        {
+            "question": "Why did the math book look sad?",
+            "answer": "Because it had too many problems."
+        },
+        {
+            "question": "What do you get when you cross a snowman and a vampire?",
+            "answer": "Frostbite."
+        },
+        {
+            "question": "Why did the bicycle fall over?",
+            "answer": "Because it was two-tired."
+        },
+        {
+            "question": "What do you call a bear with no teeth?",
+            "answer": "A gummy bear."
+        },
+        {
+            "question": "Why don’t oysters donate to charity?",
+            "answer": "Because they’re shellfish."
+        },
+        {
+            "question": "What do you call a fish wearing a bowtie?",
+            "answer": "Sofishticated."
+        },
+        {
+            "question": "Why don’t some couples go to the gym?",
+            "answer": "Because some relationships don’t work out."
+        }
+    ]
+}

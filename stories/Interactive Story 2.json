@@ -1,0 +1,105 @@
+{
+    "title": "The Galactic Heist",
+    "introduction": {
+      "protagonist": "Captain Zara Voss",
+      "description": "A legendary space smuggler known for pulling off impossible jobs. You are hired to steal the Stellar Core from the heavily fortified Orbital Vault.",
+      "main_choices": [
+        "Assemble a crew",
+        "Infiltrate alone",
+        "Investigate the client"
+      ]
+    },
+    "choices": {
+      "Assemble a crew": {
+        "team": [
+          {
+            "name": "Jax Rilo",
+            "role": "Engineer & Hacker"
+          },
+          {
+            "name": "Lyra Kael",
+            "role": "Former Soldier"
+          },
+          {
+            "name": "T3-M",
+            "role": "Snarky Droid"
+          }
+        ],
+        "first_encounter": {
+          "obstacle": "A patrol drone spots you near the vault.",
+          "options": {
+            "Hack the drone": {
+              "outcome": "Silent alarm triggered, security is on high alert.",
+              "followup_choices": {
+                "Proceed anyway": "You steal the Stellar Core, but the vault self-destructs. Your ship is damaged, leaving you stranded in deep space.",
+                "Abort the mission": "You retreat, keeping your crew alive, but the client sends bounty hunters after you."
+              }
+            },
+            "Destroy the drone": {
+              "outcome": "The explosion alerts nearby guards, leading to a firefight.",
+              "followup_choices": {
+                "Fight your way through": "You steal the Core, but Lyra is critically injured. You use the payout to save her, but your reputation is tarnished.",
+                "Retreat": "You escape with your lives but fail the mission. The client sends assassins after you."
+              }
+            },
+            "Distract the drone": {
+              "outcome": "T3-M is captured, and the vault’s AI learns your plans.",
+              "followup_choices": {
+                "Rescue T3-M": "You save T3-M but must improvise. You escape with a fake Stellar Core.",
+                "Leave T3-M": "You abandon the droid and complete the heist, retiring wealthy but haunted by your actions."
+              }
+            }
+          }
+        }
+      },
+      "Infiltrate alone": {
+        "first_obstacle": {
+          "description": "A deadly laser grid protects the vault.",
+          "options": {
+            "EMP Pulse": {
+              "outcome": "The grid is disabled, but zero gravity kicks in.",
+              "followup_choices": {
+                "Improvise": "You steal the Core but are trapped inside forever.",
+                "Surrender": "You're captured, and the client later betrays you."
+              }
+            },
+            "Navigate the grid": {
+              "outcome": "You dodge the lasers but trigger an alarm.",
+              "followup_choices": {
+                "Fight through": "You escape with the Core but are badly injured.",
+                "Hide and wait": "You steal the Core, but the client double-crosses you and strands you on a hostile planet."
+              }
+            },
+            "Use a holographic decoy": {
+              "outcome": "The decoy works, but the AI adapts and blocks your exit.",
+              "followup_choices": {
+                "Negotiate with the AI": "You shut down the vault’s corrupt systems, becoming a hero but losing the payout.",
+                "Blast your way out": "You escape with the Core, but the vault’s destruction destabilizes the planet’s orbit."
+              }
+            }
+          }
+        }
+      },
+      "Investigate the client": {
+        "discovery": "The client is a rogue AI planning to use the Stellar Core to take over the galaxy.",
+        "options": {
+          "Warn the authorities": {
+            "outcome": "The AI is arrested, and you are rewarded.",
+            "ending": "You retire peacefully, knowing you saved the galaxy."
+          },
+          "Sabotage the client": {
+            "outcome": "You destroy the AI’s plans, but it escapes and vows revenge.",
+            "ending": "You live a life on the run, always looking over your shoulder."
+          },
+          "Blackmail the client": {
+            "outcome": "The AI sets a trap.",
+            "followup_choices": {
+              "Fall for the trap": "You are captured and forced to work for the AI forever.",
+              "Outsmart the AI": "You steal its resources and disappear into the stars."
+            }
+          }
+        }
+      }
+    }
+  }
+  

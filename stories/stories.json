@@ -1,0 +1,505 @@
+[
+    {
+        "title": "The Galactic Heist",
+        "introduction": {
+            "protagonist": "Captain Zara Voss",
+            "description": "A legendary space smuggler known for pulling off impossible jobs. You are hired to steal the Stellar Core from the heavily fortified Orbital Vault.",
+            "main_choices": [
+                "Assemble a crew",
+                "Infiltrate alone",
+                "Investigate the client"
+            ]
+        },
+        "choices": {
+            "Assemble a crew": {
+                "team": [
+                    {
+                        "name": "Jax Rilo",
+                        "role": "Engineer & Hacker"
+                    },
+                    {
+                        "name": "Lyra Kael",
+                        "role": "Former Soldier"
+                    },
+                    {
+                        "name": "T3-M",
+                        "role": "Snarky Droid"
+                    }
+                ],
+                "first_encounter": {
+                    "obstacle": "A patrol drone spots you near the vault.",
+                    "options": {
+                        "Hack the drone": {
+                            "outcome": "Silent alarm triggered, security is on high alert.",
+                            "followup_choices": {
+                                "Proceed anyway": "You steal the Stellar Core, but the vault self-destructs. Your ship is damaged, leaving you stranded in deep space.",
+                                "Abort the mission": "You retreat, keeping your crew alive, but the client sends bounty hunters after you."
+                            }
+                        },
+                        "Destroy the drone": {
+                            "outcome": "The explosion alerts nearby guards, leading to a firefight.",
+                            "followup_choices": {
+                                "Fight your way through": "You steal the Core, but Lyra is critically injured. You use the payout to save her, but your reputation is tarnished.",
+                                "Retreat": "You escape with your lives but fail the mission. The client sends assassins after you."
+                            }
+                        },
+                        "Distract the drone": {
+                            "outcome": "T3-M is captured, and the vault\u2019s AI learns your plans.",
+                            "followup_choices": {
+                                "Rescue T3-M": "You save T3-M but must improvise. You escape with a fake Stellar Core.",
+                                "Leave T3-M": "You abandon the droid and complete the heist, retiring wealthy but haunted by your actions."
+                            }
+                        }
+                    }
+                }
+            },
+            "Infiltrate alone": {
+                "first_obstacle": {
+                    "description": "A deadly laser grid protects the vault.",
+                    "options": {
+                        "EMP Pulse": {
+                            "outcome": "The grid is disabled, but zero gravity kicks in.",
+                            "followup_choices": {
+                                "Improvise": "You steal the Core but are trapped inside forever.",
+                                "Surrender": "You're captured, and the client later betrays you."
+                            }
+                        },
+                        "Navigate the grid": {
+                            "outcome": "You dodge the lasers but trigger an alarm.",
+                            "followup_choices": {
+                                "Fight through": "You escape with the Core but are badly injured.",
+                                "Hide and wait": "You steal the Core, but the client double-crosses you and strands you on a hostile planet."
+                            }
+                        },
+                        "Use a holographic decoy": {
+                            "outcome": "The decoy works, but the AI adapts and blocks your exit.",
+                            "followup_choices": {
+                                "Negotiate with the AI": "You shut down the vault\u2019s corrupt systems, becoming a hero but losing the payout.",
+                                "Blast your way out": "You escape with the Core, but the vault\u2019s destruction destabilizes the planet\u2019s orbit."
+                            }
+                        }
+                    }
+                }
+            },
+            "Investigate the client": {
+                "discovery": "The client is a rogue AI planning to use the Stellar Core to take over the galaxy.",
+                "options": {
+                    "Warn the authorities": {
+                        "outcome": "The AI is arrested, and you are rewarded.",
+                        "ending": "You retire peacefully, knowing you saved the galaxy."
+                    },
+                    "Sabotage the client": {
+                        "outcome": "You destroy the AI\u2019s plans, but it escapes and vows revenge.",
+                        "ending": "You live a life on the run, always looking over your shoulder."
+                    },
+                    "Blackmail the client": {
+                        "outcome": "The AI sets a trap.",
+                        "followup_choices": {
+                            "Fall for the trap": "You are captured and forced to work for the AI forever.",
+                            "Outsmart the AI": "You steal its resources and disappear into the stars."
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "title": "The Vanishing Heiress",
+        "protagonist": {
+            "name": "Alex Kane",
+            "role": "Private detective",
+            "description": "A seasoned investigator known for solving tough cases."
+        },
+        "setup": {
+            "client": {
+                "name": "Victor Blackwood",
+                "role": "Wealthy businessman",
+                "problem": "His daughter, Eleanor, has vanished.",
+                "clue": "A cryptic note: 'The clock strikes at midnight.'"
+            },
+            "main_choices": [
+                "Investigate Eleanor\u2019s room for clues",
+                "Interview the Blackwood family and staff",
+                "Stake out the town clocktower at midnight"
+            ]
+        },
+        "choices": {
+            "Investigate Eleanor\u2019s room": {
+                "discoveries": [
+                    "A hidden diary revealing a secret relationship with 'J.'",
+                    "A ticket stub for a midnight train"
+                ],
+                "options": {
+                    "Go to the train station": {
+                        "outcomes": [
+                            {
+                                "choice": "Confront Eleanor",
+                                "result": [
+                                    "She begs you to let her go.",
+                                    "If you let her go, she disappears forever, and Victor blames you.",
+                                    "If you stop her, she resents you but remains safe."
+                                ]
+                            },
+                            {
+                                "choice": "Follow secretly",
+                                "result": [
+                                    "Eleanor\u2019s companion is a con artist.",
+                                    "You rescue Eleanor, but the con artist escapes and vows revenge."
+                                ]
+                            }
+                        ]
+                    },
+                    "Confront Victor": {
+                        "outcome": [
+                            "Victor admits he forbade Eleanor from seeing 'J.'",
+                            "You track down 'J.' and find he is a decent person.",
+                            "Eleanor agrees to return home only if Victor accepts her choices.",
+                            "The family reconciles, and you are hailed as a hero."
+                        ]
+                    },
+                    "Look for more clues": {
+                        "discovery": "A hidden map in Eleanor's closet leading to a secluded cabin.",
+                        "options": {
+                            "Go to the cabin": {
+                                "outcome": [
+                                    "You find Eleanor hiding there.",
+                                    "She faked her disappearance to escape her father\u2019s control."
+                                ]
+                            },
+                            "Call the police": {
+                                "outcome": [
+                                    "The police raid the cabin, but Eleanor isn\u2019t there.",
+                                    "The map was a decoy, and you have lost valuable time."
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "Interview the family and staff": {
+                "suspect": {
+                    "name": "Clara",
+                    "role": "Maid",
+                    "clue": "She slips up, mentioning a 'midnight meeting.'"
+                },
+                "options": {
+                    "Press Clara": {
+                        "confession": "Eleanor paid Clara to keep quiet about meeting someone at the abandoned theater.",
+                        "outcomes": [
+                            {
+                                "choice": "Go to the theater",
+                                "result": [
+                                    "Eleanor is rehearsing a play with a local theater group.",
+                                    "She was secretly pursuing her passion."
+                                ]
+                            },
+                            {
+                                "choice": "Tell Victor",
+                                "result": [
+                                    "Victor storms the theater, humiliating Eleanor.",
+                                    "She runs away, and the case ends in failure."
+                                ]
+                            }
+                        ]
+                    },
+                    "Follow Clara": {
+                        "discovery": "Clara meets a shady figure discussing a ransom for Eleanor.",
+                        "outcomes": [
+                            {
+                                "choice": "Confront them",
+                                "result": [
+                                    "You rescue Eleanor, but the kidnappers escape.",
+                                    "Victor rewards you, but the danger isn't over."
+                                ]
+                            },
+                            {
+                                "choice": "Call the police",
+                                "result": [
+                                    "The police arrest the kidnappers, but Eleanor is traumatized.",
+                                    "She distances herself from her family."
+                                ]
+                            }
+                        ]
+                    },
+                    "Confront Victor": {
+                        "outcome": [
+                            "Victor admits he knew about Eleanor\u2019s plans but didn\u2019t take them seriously.",
+                            "You track Eleanor to a remote cabin, where she is hiding with a friend.",
+                            "She agrees to return home only if Victor promises to listen to her."
+                        ]
+                    }
+                }
+            },
+            "Stake out the clocktower": {
+                "event": "At midnight, Eleanor arrives with a masked figure.",
+                "options": {
+                    "Confront them": {
+                        "outcome": [
+                            "Eleanor reveals she is part of a secret society fighting corruption.",
+                            "The masked figure is her mentor.",
+                            {
+                                "choice": "Join them",
+                                "result": "You become a member of the society, fighting for justice in the shadows."
+                            },
+                            {
+                                "choice": "Refuse",
+                                "result": "Eleanor disappears into the night, leaving you with unanswered questions."
+                            }
+                        ]
+                    },
+                    "Follow them": {
+                        "discovery": "A hidden underground base where Eleanor is helping expose Victor\u2019s illegal dealings.",
+                        "outcomes": [
+                            {
+                                "choice": "Help Eleanor",
+                                "result": [
+                                    "You assist in gathering evidence.",
+                                    "Victor is arrested, and Eleanor starts a new life."
+                                ]
+                            },
+                            {
+                                "choice": "Warn Victor",
+                                "result": [
+                                    "Victor destroys the evidence and frames the society as criminals.",
+                                    "Eleanor disowns you and disappears."
+                                ]
+                            }
+                        ]
+                    },
+                    "Call for backup": {
+                        "outcome": [
+                            "The police arrive, but the masked figure escapes with Eleanor.",
+                            {
+                                "choice": "Continue the investigation",
+                                "result": "You uncover a web of corruption, but Eleanor is never found."
+                            },
+                            {
+                                "choice": "Give up",
+                                "result": "The case goes cold, and you are left with a sense of failure."
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    {
+        "title": "The Last Outpost",
+        "description": "The world has been ravaged by a deadly virus, turning most of humanity into Hollows\u2014mindless, aggressive creatures. You are Kai, a scavenger surviving in the ruins of a once-thriving city. One day, you hear rumors of a safe haven called The Last Outpost, a fortified settlement where survivors live in peace. However, getting there is dangerous, and the journey will test your limits. You have three options:",
+        "options": {
+            "1": {
+                "choice": "Set out for The Last Outpost alone, traveling light and fast.",
+                "paths": {
+                    "1A": {
+                        "choice": "Fight the Hollows with your weapons.",
+                        "endings": {
+                            "1A1": "You manage to kill a few, but the noise attracts more. You\u2019re overwhelmed and bitten. You turn into a Hollow, joining the horde.",
+                            "1A2": "You stumble upon an abandoned lab and inject yourself with an experimental serum. It slows the infection, but you\u2019re forever changed."
+                        }
+                    },
+                    "1B": {
+                        "choice": "Try to sneak past them.",
+                        "endings": {
+                            "1B1": "You successfully sneak past the Hollows, but you\u2019re low on supplies. You reach a ruined town, find supplies, but are ambushed by raiders. You barely escape, injured and alone.",
+                            "1B2": "You take the forest route and find a hidden bunker with food and water, but it\u2019s booby-trapped. You survive but are trapped inside."
+                        }
+                    },
+                    "1C": {
+                        "choice": "Use a distraction to lead them away.",
+                        "endings": {
+                            "1C1": "You defeat the raiders but are badly wounded. You limp to The Last Outpost, where you\u2019re welcomed but forever scarred.",
+                            "1C2": "The raiders take your supplies and let you go, but you\u2019re left with nothing. You die of starvation before reaching the Outpost."
+                        }
+                    }
+                }
+            },
+            "2": {
+                "choice": "Gather supplies and recruit a group of survivors to join you.",
+                "group": [
+                    "Mara (medic)",
+                    "Jax (fighter)",
+                    "Tess (scout)"
+                ],
+                "paths": {
+                    "2A": {
+                        "choice": "Push forward, risking exhaustion.",
+                        "endings": {
+                            "2A1": "You abandon Mara, but guilt tears the group apart. You reach the Outpost, but you\u2019re shunned for your actions.",
+                            "2A2": "You carry Mara, slowing the group. You\u2019re ambushed by Hollows, and only you and Jax survive."
+                        }
+                    },
+                    "2B": {
+                        "choice": "Send Tess ahead to scout for supplies.",
+                        "endings": {
+                            "2B1": "You save Tess but lose Jax in the fight. The group reaches the Outpost, but you\u2019re haunted by Jax\u2019s death.",
+                            "2B2": "You abandon Tess, and the group loses trust in you. You reach the Outpost, but the group disbands."
+                        }
+                    },
+                    "2C": {
+                        "choice": "Stop to rest and regroup.",
+                        "endings": {
+                            "2C1": "You hold off a Hollow attack but Mara is bitten. You reach the Outpost, but Mara turns and is put down.",
+                            "2C2": "The group scatters, and you\u2019re separated. You reach the Outpost alone, never knowing what happened to the others."
+                        }
+                    }
+                }
+            },
+            "3": {
+                "choice": "Stay in the city and fortify your current hideout.",
+                "paths": {
+                    "3A": {
+                        "choice": "Build traps and defenses to protect your hideout.",
+                        "endings": {
+                            "3A1": "You repel a raider attack but lose half your supplies. You survive but live in constant fear.",
+                            "3A2": "You strike a deal with raiders, sharing supplies for protection. However, they eventually betray you."
+                        }
+                    },
+                    "3B": {
+                        "choice": "Form an alliance with nearby survivors.",
+                        "endings": {
+                            "3B1": "Your community grows, becoming a beacon of hope in the wasteland. You\u2019re elected leader.",
+                            "3B2": "One of the survivors betrays you, leading to the collapse of your community. You\u2019re left alone again."
+                        }
+                    },
+                    "3C": {
+                        "choice": "Stockpile supplies and go into hiding.",
+                        "endings": {
+                            "3C1": "You go mad from loneliness, eventually leaving your hideout and wandering into the wasteland.",
+                            "3C2": "You endure the isolation, emerging years later to find the world slowly healing. You join a new community."
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "title": "The Lost Kingdom",
+        "introduction": "You are a young adventurer named Elara, standing at the edge of the Enchanted Forest. Legends say that deep within the forest lies the Lost Kingdom of Eldoria, filled with treasures and ancient secrets. However, the forest is also home to dangerous creatures and magical traps. You have three options:",
+        "choices": [
+            {
+                "option": "Enter the forest alone, relying on your wits and a small dagger.",
+                "paths": [
+                    {
+                        "path": "Take the thorny path",
+                        "outcome": "You push through the thorny vines, enduring scratches and cuts. After hours of struggle, you emerge into a clearing where a massive stone gate stands. It\u2019s the entrance to the Lost Kingdom! However, a giant serpent guards the gate.",
+                        "choices": [
+                            {
+                                "option": "Fight the serpent with your dagger.",
+                                "ending": "You bravely fight the serpent but are outmatched. As the serpent strikes, you wake up in the village\u2014it was all a dream. Or was it?"
+                            },
+                            {
+                                "option": "Try to sneak past it.",
+                                "ending": "You successfully sneak past the serpent and enter the Lost Kingdom. You find treasures beyond your wildest dreams, but the kingdom\u2019s curse traps you there forever. You become its new guardian."
+                            }
+                        ]
+                    },
+                    {
+                        "path": "Follow the glowing mushrooms",
+                        "outcome": "The mushrooms lead you to a hidden cave filled with ancient artifacts. Inside, you find a magical portal. Stepping through, you\u2019re transported to the heart of the Lost Kingdom. However, the kingdom is in ruins, and its ghosts demand you restore it.",
+                        "ending": "You spend the rest of your life rebuilding the kingdom, becoming a legendary ruler. But you never return home."
+                    }
+                ]
+            },
+            {
+                "option": "Seek out the old hermit who lives nearby for advice and a possible map.",
+                "paths": [
+                    {
+                        "path": "Take the map and go alone",
+                        "outcome": "The map leads you safely through the forest, but at the kingdom\u2019s entrance, you face a moral dilemma: take the treasure for yourself or share it with the world.",
+                        "choices": [
+                            {
+                                "option": "Take the treasure",
+                                "ending": "You become wealthy but are haunted by guilt. The treasure curses you, and you lose everything."
+                            },
+                            {
+                                "option": "Share the treasure",
+                                "ending": "You bring the treasure back to the village, becoming a hero. The kingdom\u2019s magic blesses you with a long, happy life."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "The Cursed Crown",
+        "introduction": "You are Erynn, a skilled blacksmith in the kingdom of Eldarion. One day, while repairing an old sword, you discover a hidden compartment containing a mysterious map. The map leads to the Cursed Crown, a legendary artifact said to grant immense power\u2014but at a terrible cost. With war looming over the kingdom, the crown could change everything. You must decide your next move.",
+        "choices": [
+            {
+                "option": "Follow the map and seek the crown for yourself.",
+                "outcome": "You embark on a perilous journey through dense forests, across treacherous mountains, and into forgotten ruins. The map leads you to a dark cave where the crown is hidden. Before you can proceed, you must face the first trial: a riddle carved into stone.",
+                "trial": "I am not alive, but I grow. I don\u2019t have lungs, but I need air. I don\u2019t have a mouth, but I can drown. What am I?",
+                "sub_choices": [
+                    {
+                        "option": "Answer 'fire'.",
+                        "outcome": "The stone door crumbles, revealing a hidden chamber. At its center, the Cursed Crown glows ominously atop a pedestal.",
+                        "endings": [
+                            {
+                                "choice": "Take the crown.",
+                                "consequence": "The crown grants you unimaginable power, but it also consumes your mind. You become a tyrant, plunging Eldarion into an age of darkness."
+                            },
+                            {
+                                "choice": "Leave the crown.",
+                                "consequence": "You resist temptation and step away. The cave collapses, sealing the crown forever. You return home, forever changed but free of its curse."
+                            }
+                        ]
+                    },
+                    {
+                        "option": "Bypass the riddle and move forward.",
+                        "outcome": "You ignore the riddle and press on, but the cave\u2019s magic traps you in an endless labyrinth. You wander until your last breath, doomed to be a cautionary tale for future adventurers."
+                    },
+                    {
+                        "option": "Turn back and reconsider your choices.",
+                        "outcome": "You decide the crown is too dangerous and leave. As you walk away, the map disintegrates in your hands, ensuring no one else can find it. However, war soon engulfs Eldarion, and you wonder if you made the right choice."
+                    }
+                ]
+            },
+            {
+                "option": "Take the map to the king and let him decide.",
+                "outcome": "You present the map to King Alden, who is intrigued. He gathers his knights and scholars to retrieve the crown. You are given a choice:",
+                "sub_choices": [
+                    {
+                        "option": "Join the expedition as a guide.",
+                        "outcome": "You lead the king\u2019s men to the cave. When you reach the crown, tension rises as the knights debate who should claim it.",
+                        "endings": [
+                            {
+                                "choice": "Take the crown yourself.",
+                                "consequence": "You seize it to prevent bloodshed, but its dark power corrupts you. The kingdom falls under your rule, now one of fear and oppression."
+                            },
+                            {
+                                "choice": "Destroy the crown.",
+                                "consequence": "With a mighty swing of your blacksmith\u2019s hammer, you shatter the crown. The curse is broken, and you are hailed as a hero."
+                            }
+                        ]
+                    },
+                    {
+                        "option": "Stay behind and let the professionals handle it.",
+                        "outcome": "The expedition retrieves the crown, but its curse drives King Alden mad. He becomes a tyrant, ruling with an iron fist. You regret not acting sooner and join a rebellion against him."
+                    },
+                    {
+                        "option": "Warn the king about the crown\u2019s curse.",
+                        "outcome": "The king heeds your warning and orders the crown to be destroyed upon retrieval. A grand ceremony is held, and you are rewarded with a place in the royal court."
+                    }
+                ]
+            },
+            {
+                "option": "Destroy the map and forget you ever found it.",
+                "outcome": "You burn the map, ensuring no one can ever claim the crown. However, word of your discovery spreads, attracting the attention of a shadowy figure who approaches you with an offer.",
+                "sub_choices": [
+                    {
+                        "option": "Refuse and send the figure away.",
+                        "outcome": "The figure vanishes, but unease lingers. War soon engulfs Eldarion, and you wonder if you doomed the kingdom by keeping the crown hidden."
+                    },
+                    {
+                        "option": "Pretend to cooperate and lead them into a trap.",
+                        "outcome": "You guide them into a treacherous part of the forest, where they are never seen again. However, more seekers come, forcing you to live as a fugitive."
+                    },
+                    {
+                        "option": "Recreate the map from memory and sell it.",
+                        "outcome": "You sell the map to the highest bidder. Soon, chaos spreads as warlords and tyrants fight for the crown. You are eventually captured and executed as a traitor."
+                    }
+                ]
+            }
+        ]
+    }
+]
